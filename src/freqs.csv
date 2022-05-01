@@ -1,253 +1,253 @@
 "country","freq"
-"Abkhazia",6745
-"Afghanistan",7727
-"Aland Islands",641
-"Albania",3705
-"Algeria",6989
-"American Samoa",1522
-"Andorra",6472
-"Angola",895
-"Anguilla",6260
-"Antarctica",3024
-"Antigua and Barbuda",254
-"Argentina",2065
-"Armenia",492
-"Aruba",4610
-"Australia",38
-"Austria",7605
-"Azerbaijan",1100
-"Bahamas",3862
-"Bahrain",6617
-"Bangladesh",10668
-"Barbados",6891
-"Belarus",7634
-"Belgium",71
-"Belize",486
-"Benin",3701
-"Bermuda",816
-"Bhutan",1565
-"Bolivia",4838
-"Bosnia and Herzegovina",5639
-"Botswana",1408
-"Bouvet Island",2180
-"Brazil",7299
-"British Indian Ocean Territory",3577
-"British Virgin Islands",4165
-"Brunei",8070
-"Bulgaria",493
-"Burkina Faso",613
-"Burundi",5795
-"Cambodia",1955
-"Cameroon",6578
-"Canada",7795
-"Cape Verde",3274
-"Cayman Islands",3830
-"Central African Republic",5379
-"Chad",3732
-"Chile",4701
-"China",515
-"Christmas Island",2528
-"Cocos (Keeling) Islands",7985
-"Colombia",299
-"Comoros",5367
-"Congo (DRC)",2839
-"Congo (Republic)",3785
-"Cook Islands",1537
-"Costa Rica",3746
-"Côte d'Ivoire",167
-"Croatia",6541
-"Cuba",7432
-"Curaçao",2504
-"Cyprus",6122
-"Czech Republic",5106
-"Denmark",3524
-"Djibouti",3990
-"Dominica",3221
-"Dominican Republic",1092
-"Ecuador",5309
-"Egypt",4917
-"El Salvador",4082
-"Equatorial Guinea",1667
-"Eritrea",7042
-"Estonia",3612
-"Ethiopia",5145
-"Falkland Islands (Islas Malvinas)",7508
-"Faroe Islands",6019
-"Fiji",5870
-"Finland",1562
-"France",1875
-"French Guiana",7036
-"French Polynesia",389
-"French Southern Territories",1081
-"Gabon",2173
-"Gambia",3892
-"Georgia",7815
-"Germany",758
-"Ghana",799
-"Gibraltar",6715
-"Greece",3635
-"Greenland",256
-"Grenada",5673
-"Guadeloupe",5536
-"Guam",2291
-"Guatemala",8147
-"Guernsey",794
-"Guinea",1024
-"Guinea-Bissau",1829
-"Guyana",7381
-"Haiti",2485
-"Honduras",3900
-"Hong Kong",8086
-"Hungary",2281
-"Iceland",1949
-"India",5949
-"Indonesia",897
-"Iran",5927
-"Iraq",2282
-"Ireland",1363
-"Isle of Man",3388
-"Israel",7679
-"Italy",2353
-"Jamaica",7451
-"Japan",3483
-"Jersey",625
-"Jordan",5894
-"Kazakhstan",1536
-"Kenya",13071
-"Kiribati",53
-"Kosovo",7635
-"Kuwait",3664
-"Kyrgyzstan",976
-"Laos",4017
-"Latvia",2468
-"Lebanon",5874
-"Lesotho",5103
-"Liberia",2393
-"Libya",6185
-"Liechtenstein",746
-"Lithuania",1418
-"Luxembourg",6411
-"Macau",5575
-"Macedonia (FYROM)",3256
-"Madagascar",3411
-"Malawi",2136
-"Malaysia",1151
-"Maldives",7397
-"Mali",5833
-"Malta",2947
-"Marshall Islands",6491
-"Martinique",4777
-"Mauritania",334
-"Mauritius",5491
-"Mayotte",3371
-"Mexico",4555
-"Micronesia",7324
-"Moldova",3051
-"Monaco",4567
-"Mongolia",5807
-"Montenegro",4739
-"Montserrat",1951
-"Morocco",4634
-"Mozambique",2886
-"Myanmar (Burma)",6652
-"Nagorno-Karabakh Republic",4870
-"Namibia",2790
-"Nauru",4963
-"Nepal",12201
-"Netherlands",2007
-"Netherlands Antilles",5568
-"New Caledonia",4811
-"New Zealand",5049
-"Nicaragua",76
-"Niger",1609
-"Nigeria",9953
-"Niue",3442
-"Norfolk Island",4874
-"North Korea",1705
-"Northern Cyprus",721
-"Northern Mariana Islands",65
-"Norway",3413
-"Oman",4445
-"Pakistan",8009
-"Palau",7321
-"Palestine",6029
-"Panama",7580
-"Papua New Guinea",6012
-"Paraguay",2314
-"Peru",7636
-"Philippines",11537
-"Pitcairn Islands",5903
-"Poland",3412
-"Portugal",1890
-"Puerto Rico",6901
-"Qatar",2591
-"Réunion",2273
-"Romania",2088
-"Russia",4929
-"Rwanda",3307
-"Saint Pierre and Miquelon",5318
-"Saint Vincent and the Grenadines",637
-"Samoa",594
-"San Marino",811
-"São Tomé and Príncipe",598
-"Saudi Arabia",2096
-"Senegal",313
-"Serbia",3310
-"Seychelles",1797
-"Sierra Leone",6998
-"Singapore",4658
-"Slovakia",2777
-"Slovenia",3758
-"Solomon Islands",5361
-"Somalia",597
-"South Africa",3255
-"South Georgia and the South Sandwich Islands",447
-"South Korea",3833
-"South Ossetia",4928
-"South Sudan",3082
-"Spain",6641
-"Sri Lanka",5296
-"St. Barthélemy",637
-"St. Kitts and Nevis",3327
-"St. Lucia",2439
-"St. Martin",2339
-"Sudan",4416
-"Suriname",7240
-"Svalbard and Jan Mayen",4064
-"Swaziland",3873
-"Sweden",5118
-"Switzerland",5074
-"Syria",287
-"Taiwan",4374
-"Tajikistan",5468
-"Tanzania",305
-"Thailand",4807
-"Timor-Leste",6217
-"Togo",445
-"Tokelau",2317
-"Tonga",2935
-"Transnistria",259
-"Trinidad and Tobago",996
-"Tristan da Cunha",7
-"Tunisia",1951
-"Turkey",7904
-"Turkmenistan",5072
-"Turks and Caicos Islands",7090
-"Tuvalu",7483
-"U.S. Virgin Islands",5992
-"Uganda",7168
-"Ukraine",7377
-"United Arab Emirates",4488
-"United Kingdom",1324
-"United States",3876
-"Uruguay",1903
-"Uzbekistan",2268
-"Vanuatu",4187
-"Vatican City",2085
-"Venezuela",4864
-"Vietnam",2486
-"Wallis and Futuna",4827
-"Western Sahara",5024
-"Yemen",7793
-"Zambia",7499
-"Zimbabwe",1210
+"Abkhazia",1614
+"Afghanistan",6736
+"Aland Islands",3172
+"Albania",6730
+"Algeria",5722
+"American Samoa",7193
+"Andorra",5539
+"Angola",1079
+"Anguilla",4979
+"Antarctica",4101
+"Antigua and Barbuda",871
+"Argentina",2009
+"Armenia",2007
+"Aruba",7737
+"Australia",3370
+"Austria",3010
+"Azerbaijan",2476
+"Bahamas",5779
+"Bahrain",266
+"Bangladesh",6888
+"Barbados",6972
+"Belarus",5503
+"Belgium",8172
+"Belize",5403
+"Benin",1652
+"Bermuda",8137
+"Bhutan",3900
+"Bolivia",6027
+"Bosnia and Herzegovina",7147
+"Botswana",5886
+"Bouvet Island",8162
+"Brazil",1566
+"British Indian Ocean Territory",287
+"British Virgin Islands",6357
+"Brunei",4114
+"Bulgaria",4237
+"Burkina Faso",7444
+"Burundi",6119
+"Cambodia",4365
+"Cameroon",368
+"Canada",2339
+"Cape Verde",2274
+"Cayman Islands",5657
+"Central African Republic",3075
+"Chad",3543
+"Chile",3625
+"China",4030
+"Christmas Island",5721
+"Cocos (Keeling) Islands",8124
+"Colombia",191
+"Comoros",219
+"Congo (DRC)",6371
+"Congo (Republic)",5069
+"Cook Islands",4970
+"Costa Rica",4054
+"Côte d'Ivoire",5717
+"Croatia",5285
+"Cuba",2686
+"Curaçao",2239
+"Cyprus",3382
+"Czech Republic",6485
+"Denmark",177
+"Djibouti",5106
+"Dominica",3558
+"Dominican Republic",5239
+"Ecuador",3116
+"Egypt",954
+"El Salvador",1906
+"Equatorial Guinea",399
+"Eritrea",5625
+"Estonia",1629
+"Ethiopia",4756
+"Falkland Islands (Islas Malvinas)",6887
+"Faroe Islands",745
+"Fiji",4145
+"Finland",6251
+"France",7528
+"French Guiana",1380
+"French Polynesia",4261
+"French Southern Territories",5725
+"Gabon",3157
+"Gambia",2419
+"Georgia",897
+"Germany",3313
+"Ghana",4487
+"Gibraltar",7215
+"Greece",4582
+"Greenland",6843
+"Grenada",6115
+"Guadeloupe",1740
+"Guam",5182
+"Guatemala",4863
+"Guernsey",7285
+"Guinea",6910
+"Guinea-Bissau",1149
+"Guyana",2382
+"Haiti",2382
+"Honduras",1852
+"Hong Kong",2125
+"Hungary",6127
+"Iceland",7514
+"India",7873
+"Indonesia",4950
+"Iran",1322
+"Iraq",932
+"Ireland",8089
+"Isle of Man",8217
+"Israel",601
+"Italy",4654
+"Jamaica",6114
+"Japan",5622
+"Jersey",1910
+"Jordan",7284
+"Kazakhstan",2882
+"Kenya",13259
+"Kiribati",3482
+"Kosovo",6753
+"Kuwait",2362
+"Kyrgyzstan",3413
+"Laos",3161
+"Latvia",7616
+"Lebanon",7344
+"Lesotho",1021
+"Liberia",1077
+"Libya",2824
+"Liechtenstein",481
+"Lithuania",1512
+"Luxembourg",6772
+"Macau",6059
+"Macedonia (FYROM)",3350
+"Madagascar",3195
+"Malawi",4382
+"Malaysia",7600
+"Maldives",3201
+"Mali",1235
+"Malta",6225
+"Marshall Islands",6248
+"Martinique",7029
+"Mauritania",7492
+"Mauritius",3339
+"Mayotte",5954
+"Mexico",5162
+"Micronesia",4026
+"Moldova",547
+"Monaco",6968
+"Mongolia",3650
+"Montenegro",1018
+"Montserrat",3819
+"Morocco",5491
+"Mozambique",6863
+"Myanmar (Burma)",858
+"Nagorno-Karabakh Republic",613
+"Namibia",3895
+"Nauru",3336
+"Nepal",7608
+"Netherlands",1773
+"Netherlands Antilles",6594
+"New Caledonia",7439
+"New Zealand",2941
+"Nicaragua",2941
+"Niger",792
+"Nigeria",6798
+"Niue",2136
+"Norfolk Island",1348
+"North Korea",3900
+"Northern Cyprus",2527
+"Northern Mariana Islands",3264
+"Norway",5815
+"Oman",7867
+"Pakistan",6159
+"Palau",6053
+"Palestine",3150
+"Panama",5176
+"Papua New Guinea",512
+"Paraguay",4330
+"Peru",3958
+"Philippines",10768
+"Pitcairn Islands",1934
+"Poland",527
+"Portugal",3564
+"Puerto Rico",2830
+"Qatar",1587
+"Réunion",7018
+"Romania",451
+"Russia",1312
+"Rwanda",3191
+"Saint Pierre and Miquelon",986
+"Saint Vincent and the Grenadines",5520
+"Samoa",6833
+"San Marino",7051
+"São Tomé and Príncipe",2365
+"Saudi Arabia",7198
+"Senegal",551
+"Serbia",3056
+"Seychelles",151
+"Sierra Leone",1797
+"Singapore",2877
+"Slovakia",5574
+"Slovenia",2615
+"Solomon Islands",1685
+"Somalia",6220
+"South Africa",7559
+"South Georgia and the South Sandwich Islands",2154
+"South Korea",4290
+"South Ossetia",6206
+"South Sudan",2122
+"Spain",2743
+"Sri Lanka",1346
+"St. Barthélemy",787
+"St. Kitts and Nevis",514
+"St. Lucia",2253
+"St. Martin",2072
+"Sudan",2555
+"Suriname",1226
+"Svalbard and Jan Mayen",8166
+"Swaziland",2328
+"Sweden",882
+"Switzerland",2020
+"Syria",2319
+"Taiwan",4400
+"Tajikistan",980
+"Tanzania",1971
+"Thailand",2944
+"Timor-Leste",5537
+"Togo",1339
+"Tokelau",1743
+"Tonga",396
+"Transnistria",2803
+"Trinidad and Tobago",4472
+"Tristan da Cunha",336
+"Tunisia",1771
+"Turkey",2647
+"Turkmenistan",441
+"Turks and Caicos Islands",4759
+"Tuvalu",2745
+"U.S. Virgin Islands",6541
+"Uganda",3195
+"Ukraine",7152
+"United Arab Emirates",3536
+"United Kingdom",4774
+"United States",2512
+"Uruguay",885
+"Uzbekistan",55
+"Vanuatu",2690
+"Vatican City",6882
+"Venezuela",7494
+"Vietnam",1983
+"Wallis and Futuna",8227
+"Western Sahara",3772
+"Yemen",2830
+"Zambia",975
+"Zimbabwe",5769

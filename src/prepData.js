@@ -28,16 +28,23 @@ const countries = ["Abkhazia", "Afghanistan", "Aland Islands", "Albania", "Alger
     "United Arab Emirates", "United Kingdom", "United States", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Wallis and Futuna",
     "Western Sahara", "Yemen", "Zambia", "Zimbabwe"];
 
-const freqs = [];
-let freqSum = 0;
+const freqsSrc = [];
+const freqsDest = [];
+let freqSumSrc = 0;
+let freqSumDest = 0;
 
 for (let i = 0; i < countries.length; i++) {
-    const freq = Math.random() * 100;
-    freqs.push(freq);
-    freqSum += freq;
+    const freqSrc = Math.random() * 100;
+    freqsSrc.push(freqSrc);
+    freqSumSrc += freqSrc;
+
+    const freqDest = Math.random() * 100;
+    freqsDest.push(freqDest);
+    freqSumDest += freqDest;
 }
 
-const freqCountries = ["Pakistan", "India", "Bangladesh", "Philippines", "Nepal", "Nigeria", "Kenya"];
+const freqSourceCountries = ["Pakistan", "India", "Bangladesh", "Philippines", "Nepal", "Nigeria", "Kenya"];
+const freqDestinationCountries = ["Zimbabwe", "France", "Switzerland", "United States", "Pakistan", "Bahamas", "Maldives", "Egypt"];
 const data2018 = [];
 const data2019 = [];
 const data2020 = [];
@@ -48,17 +55,19 @@ csvToJson().fromFile('./data.csv').then(
             delete data.oldbalanceDest;
             delete data.newbalanceDest;
             delete data.oldbalanceOrg;
-            delete data.newbalanceOrg;
+            delete data.newbalanceOrig;
 
             data.date = new Date(initTime + (step * (data.step - 1)));
 
             delete data.step;
-            data.isFraud = data.isFraud === '1';
-            data.isFlaggedFraud = data.isFlaggedFraud === '1';
+            data.isFraud = data.isFraud === '1' || Math.random() < 0.007;
 
-            const randomFreq = Math.random() * freqSum;
+            data.isFlaggedFraud = data.isFlaggedFraud === '1' || data.isFraud || Math.random() < 0.0002;
 
-            const findIndex = f => {
+            const randomSourceFreq = Math.random() * freqSumSrc;
+            const randomDestFreq = Math.random() * freqSumDest;
+
+            const findIndex = (f, freqs) => {
                 let currSum = 0;
 
                 for (let i = 0; i < freqs.length; i++) {
@@ -71,12 +80,15 @@ csvToJson().fromFile('./data.csv').then(
                 }
             };
 
-            data.country = Math.random() * 25 < 1 ? freqCountries[Math.floor(Math.random() * freqCountries.length)] :
-                countries[findIndex(randomFreq)];
+            data.sourceCountry = Math.random() * 25 < 1 ?
+                freqSourceCountries[Math.floor(Math.random() * freqSourceCountries.length)] :
+                countries[findIndex(randomSourceFreq, freqsSrc)];
 
-            if (!data.country) {
-                console.log(randomFreq, freqSum, freqs);
-            }
+            data.destinationCountry = Math.random() * 100 < (data.isFraud ? 37 : 97) ?
+                data.sourceCountry :
+                (Math.random() * 25 < 1 ?
+                    freqDestinationCountries[Math.floor(Math.random() * freqDestinationCountries.length)] :
+                    countries[findIndex(randomDestFreq, freqsDest)]);
 
             if (data.date.getFullYear() === 2018) {
                 data2018.push(data);
@@ -101,8 +113,12 @@ csvToJson().fromFile('./data.csv').then(
             const parserF = new Parser();
             fs.writeFileSync('freqs.csv', parserF.parse(countries.map(x => ({
                 country: x,
-                freq: rawData.filter(y => y.country === x).length
+                freq: rawData.filter(y => y.sourceCountry === x).length
             }))));
+
+            console.log(rawData.filter(x => x.isFraud).length);
+            console.log(rawData.filter(x => x.isFlaggedFraud).length);
+            console.log(rawData.filter(x => x.sourceCountry !== x.destinationCountry).length);
         } catch (err) {
             console.error(err);
         }
