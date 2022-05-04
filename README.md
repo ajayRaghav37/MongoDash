@@ -1,5 +1,25 @@
 # MongoDash
-Visualize data from Atlas Cluster and Data Lake
+This project demonstrates the ability to run MongoDB Atlas Charts visualisations against data held in both your cluster and a Datalake  
+**Time to setup: 15 mins**  
+**Time to execute: 15 mins**  
+
+# Description
+This proof shows how MongoDB can federate queries to multiple data sources in order to build visualizations through Atlas charts. This proof makes use of a financial dataset of 1,000,000 documents representing different kinds of transactions, both fraudulent and legitimate. This data will be federated from both the Atlas cluster and an attached Data Lake.  
+
+Visualtizations will include:
+- Transaction count
+- Transaction by origin country 
+- Overall transaction by month
+- Fraud flag confusion matrix  
+
+The 1,000,000 records are retrieved from a publicly available dataset and split between and Atlas cluster and an S3 bucket for datalake. The charts will allow visualizations to be returned against both data sources simultaneously
+
+
+# Setup
+asdf
+
+# Execution
+asdf
 
 # Getting Started with Create React App
 
