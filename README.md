@@ -1,6 +1,6 @@
 # MongoDash
 This project demonstrates the ability to run MongoDB Atlas Charts visualisations against data held in both your cluster and a Datalake  
-**Time to setup: 15 mins**  
+**Time to setup: 30 mins**  
 **Time to execute: 15 mins**  
 
 # Description
@@ -16,7 +16,25 @@ The 1,000,000 records are retrieved from a publicly available dataset and split 
 
 
 # Setup
-asdf
+**1. Configure Atlas Cluster**
+- Log-on to your Atlas account (using the MongoDB SA preallocated Atlas credits system) and navigate to your SA project
+- In the project's Security tab, choose to add a new user called main_user, for this user select Add Default Privileges and in the Default Privileges section add the roles readWriteAnyDatabase and clusterMonitor (make a note of the password you specify)
+- Create an M20 based 3 node replica-set in a single AWS region of your choice with default storage settings (backup can be disabled).
+
+**2. Configure Realm Application**
+
+
+**3. Configure AWS S3 Bucket**
+- Using your MongoDB 'Solution Architects' AWS pre-existing account, log on to the AWS console and near the top right hand side of the AWS Console, change the region to match the same AWS region as you created the Atlas cluster in Console
+- Navigate to the S3 service within the AWS console and select 'Create bucket'
+- Enter a name for the bucket and select the same region as your atlas cluster
+- Add Tags: be sure to set the 3 specific tags ('Name', 'owner', 'expire-on') on your instance as per the MongoDB AWS Usage Guidelines to avoid your instance from being prematurely reaped
+- All other options can be left as default  
+- Load the sample dataset into your S3 bucket
+
+**4. Configure Atlas Data Lake**
+
+
 
 # Execution
 asdf
