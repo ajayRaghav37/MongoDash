@@ -24,39 +24,13 @@ function App() {
     sourceCountry: 'Albania',
     destinationCountry: 'Albania'
   });
+  const [docsPushed, setDocsPushed] = useState(0);
   const [docsInserted, setDocsInserted] = useState(0);
-  const [docsArchived, setDocsArchived] = useState(0);
   const [btnDisabled, setBtnDisabled] = useState(false);
 
   //TODO: Add a notice for faster dashboard refreshes before clicking on inserts button. After the demo is done, restore the slower refreshes.
 
-  const serverlessFn = startDate => {
-    return new Promise(resolve => {
-      //generate a doc
-      //insert a doc
-      //return inserted docs count in live data and archived count for data that is newer than startDate along with newly inserted doc
-      setTimeout(() => resolve({
-        docsInserted: Math.floor(Math.random() * 1000),
-        docsArchived: Math.floor(Math.random() * 1000),
-        docInserted: {
-          type: 'CASH_OUT',
-          amount: (Math.random() * 100000).toFixed(2),
-          nameOrig: 'C397008337',
-          newbalanceOrig: '0.0',
-          nameDest: 'C1429169944',
-          isFraud: false,
-          isFlaggedFraud: false,
-          date: new Date('2019-03-05'),
-          country: 'Serbia'
-        }
-      }), 800);
-    });
-  };
-
   const insertMany = async () => {
-    const summed = await user.functions.insertRandom(new Date());
-    return;
-
     let localTimer = timer;
 
     setBtnDisabled(true);
@@ -80,11 +54,13 @@ function App() {
 
     interval = setInterval(countdown, 1000);
 
+    const startDate = (new Date()).toISOString();
+
     while (localTimer > 0) {
-      const resp = await serverlessFn(dt);
+      setDocsPushed(docsPushed + 1);
+      const resp = await user.functions.insertRandom(startDate);
       setDocInserted(resp.docInserted);
       setDocsInserted(resp.docsInserted);
-      setDocsArchived(resp.docsArchived);
     }
   };
 
@@ -124,9 +100,11 @@ function App() {
           </p>
           <br />
           <br />
+          <p>Total documents pushed<br /><span style={{ fontSize: 50 }}>{docsPushed}</span></p>
+          <br />
           <p>Total documents inserted<br /><span style={{ fontSize: 50 }}>{docsInserted}</span></p>
           <br />
-          <p>Total documents archived<br /><span style={{ fontSize: 50 }}>{docsArchived}</span></p>
+          <p>Total documents archived<br /><span style={{ fontSize: 50 }}>{docsPushed - docsInserted}</span></p>
         </div>
       </div>
 
