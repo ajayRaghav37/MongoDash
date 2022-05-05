@@ -14,7 +14,7 @@ Visualtizations can include:
 
 The 1,000,000 records are retrieved from a publicly available dataset and split between and Atlas cluster and an S3 bucket for datalake. The charts will allow visualizations to be returned against both data sources simultaneously
 
-<img width="1063" alt="image" src="https://user-images.githubusercontent.com/100958794/166856793-2b8130ed-b419-42b9-90c2-b2709b67a3bc.png">
+![image](https://user-images.githubusercontent.com/100958794/166922001-94f1a409-534a-472a-b5c2-4848d0cdd1ee.png)
 
 
 
