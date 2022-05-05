@@ -62,6 +62,10 @@ The 1,000,000 records are retrieved from a publicly available dataset and split 
 - Select 'Configure a New Data Lake' and click on 'Connect Data'
 - Choose AWS S3 as a data source and follow the configuration instructions to connect your S3 bucket to Atlas Data Lake
 
+**7. Configure Online Archive**
+- In your Atlas account, navigate to your cluster and select the online archive tab
+- Select 'Configure Online Archive' and select 'Custom Criteria' under archiving rule
+- Paste the following rule into the custom criteria to archive specific kinds of transactions: {"type": "BALANCE_CORRECTION"}
 
 
 # Execution
