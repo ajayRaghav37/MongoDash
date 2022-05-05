@@ -94,7 +94,7 @@ function App() {
         {/* <div style={{ background: '#21313C', height: '100vh', flex: 1 }}></div> */}
         <div style={{ background: '#11212C', width: '20vw', display: docsInserted > 0 ? 'block' : 'none', textAlign: 'left', padding: 10, color: 'white' }}>
           <p>Document just inserted</p>
-          <p style={{ backgroundColor: '#222', border: '1px solid darkgrey', padding: '5px 10px', fontSize: 15 }}>
+          <p style={{ backgroundColor: '#222', border: '1px solid darkgrey', padding: '5px 10px', fontSize: 15, overflowX: 'hidden' }}>
             <code>
               <pre>
                 {JSON.stringify(docInserted, null, 2)}
