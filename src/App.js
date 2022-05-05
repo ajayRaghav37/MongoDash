@@ -1,6 +1,15 @@
 import logo from './mongoleaf.png';
 import './App.css';
 import { useState, useEffect } from 'react';
+import * as Realm from "realm-web";
+// Add your App ID
+const app = new Realm.App({ id: 'mongodash-vyrdt' });
+// Create an anonymous credential
+const credentials = Realm.Credentials.anonymous();
+let user;
+
+// `App.currentUser` updates to match the logged in user
+
 
 function App() {
   const [timer, setTimer] = useState(300);
@@ -27,8 +36,8 @@ function App() {
       //insert a doc
       //return inserted docs count in live data and archived count for data that is newer than startDate along with newly inserted doc
       setTimeout(() => resolve({
-        docsInserted: Math.floor(Math.random()*1000),
-        docsArchived: Math.floor(Math.random()*1000),
+        docsInserted: Math.floor(Math.random() * 1000),
+        docsArchived: Math.floor(Math.random() * 1000),
         docInserted: {
           type: 'CASH_OUT',
           amount: (Math.random() * 100000).toFixed(2),
@@ -45,6 +54,9 @@ function App() {
   };
 
   const insertMany = async () => {
+    const summed = await user.functions.insertRandom(new Date());
+    return;
+
     let localTimer = timer;
 
     setBtnDisabled(true);
@@ -78,6 +90,11 @@ function App() {
 
   useEffect(() => {
     // write do once code here on component load
+    // Authenticate the user
+    app.logIn(credentials).then(u => {
+      user = u;
+      console.log(user);
+    });
   }, []);
 
   return (
@@ -94,9 +111,9 @@ function App() {
         </div>
       </header>
       <div style={{ display: 'flex' }}>
-        <iframe style={{ background: "#21313C", height: '90vh', flex: 1, border: "none", borderRadius: 2 }} src="https://charts.mongodb.com/charts-group2-hackathon-gwmai/embed/dashboards?id=6269646a-816a-40d6-8d69-52d515b36d07&theme=dark&autoRefresh=true&maxDataAge=3600&showTitleAndDesc=false&scalingWidth=fixed&scalingHeight=fixed"></iframe>
+        <iframe style={{ background: "#21313C", height: '90vh', flex: 1, border: "none", borderRadius: 2 }} src="https://charts.mongodb.com/charts-group2-hackathon-gwmai/embed/dashboards?id=6269646a-816a-40d6-8d69-52d515b36d07&theme=dark&autoRefresh=true&maxDataAge=10&showTitleAndDesc=false&scalingWidth=fixed&scalingHeight=fixed"></iframe>
         {/* <div style={{ background: '#21313C', height: '100vh', flex: 1 }}></div> */}
-        <div style={{ background: '#11212C', width: '20vw', display: docsInserted > 0? 'block':'none', textAlign: 'left', padding: 10, color: 'white' }}>
+        <div style={{ background: '#11212C', width: '20vw', display: docsInserted > 0 ? 'block' : 'none', textAlign: 'left', padding: 10, color: 'white' }}>
           <p>Document just inserted</p>
           <p style={{ backgroundColor: '#222', border: '1px solid darkgrey', padding: '5px 10px', fontSize: 15 }}>
             <code>
