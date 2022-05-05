@@ -12,7 +12,7 @@ let user;
 
 
 function App() {
-  const [timer, setTimer] = useState(300);
+  const [timer, setTimer] = useState(600);
   const [docInserted, setDocInserted] = useState({
     type: 'CASH_OUT',
     amount: '47835.13',
@@ -24,8 +24,8 @@ function App() {
     sourceCountry: 'Albania',
     destinationCountry: 'Albania'
   });
-  const [docsPushed, setDocsPushed] = useState(0);
   const [docsInserted, setDocsInserted] = useState(0);
+  const [docsArchived, setDocsArchived] = useState(0);
   const [btnDisabled, setBtnDisabled] = useState(false);
 
   //TODO: Add a notice for faster dashboard refreshes before clicking on inserts button. After the demo is done, restore the slower refreshes.
@@ -42,7 +42,7 @@ function App() {
       if (localTimer === 0) {
         clearInterval(interval);
         setTimeout(() => {
-          setTimer(300);
+          setTimer(600);
           setBtnDisabled(false);
         }, 2000);
       }
@@ -56,10 +56,13 @@ function App() {
 
     const startDate = (new Date()).toISOString();
 
+    let docsPushed = 0;
+
     while (localTimer > 0) {
-      setDocsPushed(docsPushed + 1);
       const resp = await user.functions.insertRandom(startDate);
+      docsPushed++;
       setDocInserted(resp.docInserted);
+      setDocsArchived(docsPushed - resp.docsInserted);
       setDocsInserted(resp.docsInserted);
     }
   };
@@ -100,11 +103,9 @@ function App() {
           </p>
           <br />
           <br />
-          <p>Total documents pushed<br /><span style={{ fontSize: 50 }}>{docsPushed}</span></p>
-          <br />
           <p>Total documents inserted<br /><span style={{ fontSize: 50 }}>{docsInserted}</span></p>
           <br />
-          <p>Total documents archived<br /><span style={{ fontSize: 50 }}>{docsPushed - docsInserted}</span></p>
+          <p>Total documents archived<br /><span style={{ fontSize: 50 }}>{docsArchived}</span></p>
         </div>
       </div>
 
